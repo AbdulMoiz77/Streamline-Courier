@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+body{
+    display: flex;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(../bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+
+}
+
+.container {
+    max-width: 400px;
+    width: 100%;
+    border-radius: 8px;
+    position: relative;
+    padding: 20px;
+    background: transparent;
+    border: 2px solid rgb(255, 255, 255,0.2);
+    backdrop-filter: blur(10px);
+    color: #ebf2f1;
+}
+.container .title{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bolder;
+    padding-bottom: 20px;
+}
+.container .img-container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 170px;
+}
+.container .img-container img{
+    left: 50%;
+    position: absolute;
+    width: 100%;
+    transition: opacity 3s ease;
+}
+
+.checkmark{
+    z-index: 1;
+    opacity: 0;
+}
+.userID{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin: 10px 0 10px;
+    font-size: 18px;
+    font-weight: 600;
+    padding-top: 10px;
+}
+.container .login-link{
+    font-size: 15px;
+    margin-top: 10px;
+    padding-top: 5px;
+}
+
+.login-link p a{
+    color: #ebf2f1;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-link p a:hover{
+    text-decoration: underline;
+}
