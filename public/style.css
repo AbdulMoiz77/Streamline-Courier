@@ -1,0 +1,555 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #ebf2f1;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    scroll-behavior: smooth !important;
+}
+
+/* Header Styles */
+header{
+    background-color: #7ebfb3;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    font-weight: bold;
+    padding-left: 15px;
+}
+
+nav ul li{
+    padding: 0px 15px;
+}
+
+
+.logo{
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;   
+    color: #194759;
+    font-weight:600;
+    padding-right: 570px;
+    margin: 0;
+    padding-left: 25px;
+
+}
+.logo img {
+    width: 40px;
+    padding-right: 12px;
+}
+
+.nav-bar {
+    list-style: none;
+    display: flex;
+}
+
+
+.nav-bar a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+}
+
+.login-signup-button {
+    display: flex;
+    align-items: center;
+}
+
+.login-signup-button button {
+    margin-left: 0.5rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.login , .signup{
+    background-color: transparent;
+    color: #194759;
+    border: 3px solid #194759;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    text-decoration: double;
+    font-weight: bold;
+}
+
+.login:hover {
+    background-color: #194759;
+    color: #7ebfb3;
+}
+
+/* color : #a7f2e4 , #ebf2f1, #4f7369 */
+.signup:hover {
+    background-color: #194759;
+    color: #7ebfb3;
+}
+
+/* Banner Styles */
+
+.swift{
+    backdrop-filter: blur(10px);
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 75px;
+    position: absolute;
+    border: 2px solid rgb(255, 255, 255,0.2);
+    border-left: none;
+    width: 0px;
+    height: 452px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    transition: width 2s;
+}
+.swift #service{
+    opacity: 0;
+    font-weight: bold;
+    font-size: 28px;
+    padding-left: 20px;
+}
+
+.swift #Hour{
+    left: 0;
+    opacity: 0;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 22px;
+    padding: 15px 0 0 20px;
+}
+
+.swift #now-avail{
+    opacity: 0;
+    font-weight: 600;
+    font-size: 22px;
+    padding: 40px 0 0 20px;
+}
+.swift button{
+    visibility: visible;
+    position: absolute;
+    left: 0;
+    width: 30px;
+    color: #ebf2f1;
+    font-size: 26px;
+    font-weight: 600;
+    height: 20%;
+    border: 2px solid #194759;
+    border-radius: 0 12px 12px 0;
+    background-color: #194759;
+}
+
+.swift a{
+    opacity: 0;
+    font-size: 18px;
+    padding: 2px 0 0 20px;
+    color: #ebf2f1;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.swift a:hover{
+    text-decoration: underline;
+}
+.imgContainer {
+    background: url(images/bg.jpg);
+    background-size: contain;
+    background-position: center; 
+    width: 100%;
+    height: 530px;
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.track{
+    backdrop-filter: blur(10px);
+    border: 2px solid rgb(255, 255, 255,0.2);
+    border-radius: 12px;
+    margin: 15px;
+    padding: 6px 20px 0px;
+}
+
+.search-box{
+    display: flex;
+}
+
+.search-box input{
+    width: 400px;
+    height: 50px; 
+    font-size: 16px;
+    color: #194759;
+    padding-left: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+}
+
+.search-box input::placeholder{
+    color: #194759;
+}
+
+.track .ship{
+    color: #ebf2f1;
+    margin: 5px 0;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.search-box button{
+    width: 100px;
+    height: 56px;
+    background-color: #194759;
+    color: #a7f2e4;
+    border: 3px solid #194759;
+    border-left: none;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+.search-box button:hover{
+    background-color: #143846;
+    border: 3px solid #143846;
+}
+
+/* services-section */
+.services {
+    background-color: #7ebfb3;
+    padding: 10px 10px;
+    box-shadow: 0 8px 16px #a7f2e4;
+    border-radius: 8px;
+    max-width: 100%;
+    margin: 40px 60px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.services h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 50px;
+    color: #194759;
+    text-transform: uppercase;
+}
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.first-row, .second-row {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.service-card {
+    background-color: #ffffff;
+    padding: 20px 0px;
+    margin: 0px 50px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    flex: 1;
+    max-width: 25%;
+    transition: box-shadow 0.5s;
+}
+
+.service-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.service-card h2 {
+    font-size: 24px;
+    color: #a7f2e4;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.service-card:hover {
+    box-shadow: 16px 12px 12px rgba(0, 0, 0, 0.3);
+}
+
+.about-us-section{
+    margin-left: 10vw;
+    max-width: 80%;
+    margin-bottom: 20vh;
+    margin-top: 20vh;
+    flex-wrap: wrap;
+    background-color: #194759;
+    box-shadow: 2px 2px 10px #2e84a76f;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.about-us{
+    padding-top: 20px;
+    font-size: 3em;
+    text-align: center;
+    background-color: #194759;
+    color: #7ebfb3;
+}
+
+.card-container{
+    padding-bottom: 5%;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    background-color: #194759;
+}
+
+/* Vision Card Styles */
+.vision {
+    width: 100%;
+    max-width: 420px;
+    height: 100%;
+    max-height: 550px;
+    background-color: #ebf2f1;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.4s, box-shadow 0.3s;
+    margin: 20px 0px;
+    position: relative;
+}
+
+.vision:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.313);
+}
+
+.vision-img-container {
+    position: relative;
+}
+
+.vision-img-container img {
+    width: 100%;
+    height: 360px;
+}
+
+.card-logo-container{
+    position: absolute; 
+    top: 56%; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 75px;
+    height: 75px;
+    background-color: #ebf2f1;
+    border: 5px solid #a7f2e4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+}
+
+.card-logo-container img {
+    width: 70%;
+    height: auto;
+    margin-left: 10px;
+}
+
+h1 {
+    margin-top: 40px;
+    font-size: 25px;
+    color: #333;
+}
+
+p {
+    margin-top: -10px;
+    font-size: 15px;
+    color: #666;
+    margin-bottom: 60px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+
+/* Mission Card Styles */
+.mission {
+    width: 100%;
+    max-width: 420px;
+    height: 100%;
+    max-height: 550px;
+    background-color: #ebf2f1;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.4s, box-shadow 0.3s;
+    margin: 20px 0px;
+    position: relative;
+}
+
+.mission:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.313);
+}
+
+.mission-img-container {
+    position: relative;
+}
+
+.mission-img-container img {
+    width: 100%;
+    height: 360px;
+}
+
+/* Support Section */
+.customer-support {
+    padding: 10px;
+    background-color: #7ebfb3;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.customer-support h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #194759;
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+.customer-support h2.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.contact-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.contact-form {
+    background: #ebf2f1;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 480px;
+    height: 100%;
+    max-height: 410px;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: transform 1.2s ease, opacity 1s ease;
+}
+
+.contact-form.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 25px;
+}
+
+.form-row span {
+    flex: 1;
+}
+
+.contact-form label {
+    text-align: start;
+    font-size: 18px;
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #194759;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    height: 120px;
+    width: calc(100% - 20px);
+}
+
+.submit-button {
+    margin-left: 14vw;
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    background-color: #194759;
+    color: #a7f2e4;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.submit-button:hover {
+    background-color: #143846;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+}
+
+/* Footer Styles */
+footer {
+    background-color: #194759;
+    padding: 16px 0px;
+    text-align: center;
+    color: #7ebfb3;
+    font-size: 16px;
+    bottom: 0;
+    position: relative;
+    width: 100%;
+}
+
+footer span {
+    padding-right: 570px;
+}
+
+footer a {
+    color: #7ebfb3;
+    margin: 0 10px;
+    text-decoration: none;
+    padding-left: 18px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
