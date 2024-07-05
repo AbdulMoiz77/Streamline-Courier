@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="title">SignUp</div>
+        <label for="UserType">I am:</label>
+        <select name="UserType" id="UserType">
+            <option value="individual">Individual</option>
+            <option value="company">Company</option>
+        </select>
+        <form action="">
+            <div class="user-details">
+                <div class="input-box individual">
+                    <span class="details">First Name:</span>
+                    <input id="FirstName" type="text" placeholder="Enter your first name" required>
+                </div>
+                <div class="input-box individual">
+                    <span class="details">Last Name:</span>
+                    <input id="LastName" type="text" placeholder="Enter your last name" required>
+                </div>
+                <div class="input-box company">
+                    <span class="details">Company Name:</span>
+                    <input id="CompName" type="text" placeholder="Enter company name" required>
+                </div>
+                <div class="input-box company">
+                    <span class="details">Focal Person:</span>
+                    <input id="FocalPerson" type="text" placeholder="Enter focal person name" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Email:</span>
+                    <input id="email" class="common" type="text" placeholder="Enter your email" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Address:</span>
+                    <input id="address" class='common' type="text" placeholder="Enter your address" required>
+                </div>
+                <div class="input-box common">
+                    <span class="details">Phone Number:</span>
+                    <input id="phone" type="text" placeholder="Enter your phone no." required>
+                </div>
+                <div class="input-box individual">
+                    <span class="details">Alternate Phone Number if any</span>
+                    <input id="altPhone" type="text" placeholder="Enter your alternate phone no.">
+                </div>
+                <div class="input-box company">
+                    <span class="details">Fax Number if any</span>
+                    <input id="fax" type="text" placeholder="Enter your fax no." >
+                </div>
+                <div class="input-box individual">
+                    <span class="details">Enter your NIC:</span>
+                    <input id="NIC" type="text" placeholder="Enter your NIC no.">
+                </div>
+                <div class="input-box individual" style="opacity: 0;">
+                    <span class="details">Empty:</span>
+                    <input id="empty" type="text" placeholder="Enter your NIC no.">
+                </div>
+                <div class="input-box">
+                    <span class="details">Password:</span>
+                    <input id="password" class='common' type="password" placeholder="Enter your password" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Confirm your password:</span>
+                    <input id="verifypass" class='common' type="password" placeholder="Enter your first name" required>
+                </div>
+            </div>
+            <div class="login-link">
+                <span style="display: none;" id="invPhone"><i class="fas fa-exclamation-circle"></i>***Phone number should only contain digits (0-9)***</span>
+                <span style="display: none;" id="dupEmail"><i class="fas fa-exclamation-circle"></i>***Email already in use***</span>
+                <span style="display: none;" id="notmatch"><i class="fas fa-exclamation-circle"></i>***Password does not match***</span>
+                <span style="display: none;" id="dupPhone"><i class="fas fa-exclamation-circle"></i>***Phone number already in use***</span>
+                <span style="display: none;" id="dupAltphone"><i class="fas fa-exclamation-circle"></i>***Alternate Phone number already in use***</span>
+                <span style="display: none;" id="dupNIC"><i class="fas fa-exclamation-circle"></i>***NIC already registered with different account***</span>
+                <span style="display: none;" id="dupFax"><i class="fas fa-exclamation-circle"></i>***Fax number already in use***</span>
+                <span style="display: none;" id="dupCompName"><i class="fas fa-exclamation-circle"></i>***Company already registered***</span>
+                <span style="display: none;" id="samePhone"><i class="fas fa-exclamation-circle"></i>***Phone no. and Alternate no. can't be same***</span>
+                <span style="display: none;" id="sameFax"><i class="fas fa-exclamation-circle"></i>***Phone no. and Fax no. can't be same***</span>
+                <p>Already have an account? <a id='Loginfile' href="../Login/login.html">Login</a></p>
+            </div>
+            <div class="button">
+                <input type="submit" value="Register">
+            </div>
+        </form>    
+    </div>
+    <script src="signup.js"></script>
+</body>
+</html>

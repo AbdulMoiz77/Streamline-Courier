@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+body{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: url(bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    max-width: 700px;
+    width: 100%;
+    border-radius: 5px;
+    padding: 20px 30px;
+    background: transparent;
+    border: 2px solid rgb(255, 255, 255,0.2);
+    backdrop-filter: blur(10px);
+    color: #ebf2f1;
+
+}
+
+.container .title{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bolder;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.container select{
+    padding: 6px;
+    width: 100%;
+    background: transparent;
+    border: 2px solid rgb(255, 255, 255,0.2);
+    color: #ebf2f1;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    padding-left: 15px;
+    font-size: 16px;
+}
+
+.container select option{
+    background-color: #194759;
+    color: #ebf2f1;
+}
+
+
+.container form .user-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+
+.container form span{
+    color: #ebf2f1;
+}
+
+form .user-details .input-box{
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 20px);
+}
+
+.user-details .input-box .details{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.user-details .input-box input{
+    height: 40px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    background: transparent;
+    border: 2px solid rgb(255, 255, 255,0.2);
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+    color: #ebf2f1;
+}
+
+.user-details .input-box input::placeholder{
+    color: #ebf2f1;
+}
+
+form .button{
+    height: 45px;
+    width: 45px 0;
+}
+
+form .button input{
+    height: 100%;
+    width: 100%;
+    background: #ebf2f1;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgb(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #194759;
+    font-weight: 600;
+}
+
+form .button input:hover{
+    border: 2px solid #194759;
+}
+
+.container .login-link{
+    font-size: 15px;
+    margin: 20px 0 15px;
+}
+
+.login-link p a{
+    color: #ebf2f1;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-link p a:hover{
+    text-decoration: underline;
+}
+
+#notmatch, #dupEmail, #invPhone, #dupPhone, #dupAltphone, #dupNIC, #dupFax, #dupCompName , #sameFax, #samePhone{
+    color: red;
+    font-weight: 600;
+}
