@@ -1,1 +1,42 @@
-<!--Customer  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send contact Form data to backend</title>
+    <link rel="stylesheet" href="cust.css">
+</head>
+<body>
+    <div id="contactUsPanel" class="accordion-content">
+        <div class="form-row">
+            <span>
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" name="first-name" placeholder="eg: Alan">
+            </span>
+            <span>
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" name="last-name" placeholder="eg: Fisher" required>
+            </span>
+        </div>
+        <div class="form-row">
+            <span>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="eg: alanfisher@example.com" required>
+            </span>
+            <span>
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" placeholder="eg: 777-345-122" required>
+            </span>
+        </div>
+        <div class="form-row">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Write your message here"></textarea>
+        </div>
+        <div class="last-row">
+            <button type="submit" class="sub-btn">Submit</button>
+        </div>
+    </div>   
+    <script src="cust.js"></script>
+</body>
+</html>
+
