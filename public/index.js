@@ -1,5 +1,8 @@
-function search(){
-    console.log('hello')
+function track(){
+    const id = document.getElementById('search').value
+    if(id){
+        window.location.href = 'track/track.html?id=' + id
+    }
 }
 
 let login = document.getElementsByClassName('login')[0]
