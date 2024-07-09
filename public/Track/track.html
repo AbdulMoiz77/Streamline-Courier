@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track</title>
+    <link rel="stylesheet" href="trackstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <header id="SLheader">
+        <nav class = 'nav-bar'>
+            <ul>
+                <li class = "logo"><a href="../index.html"><img src="../images/logo.png" alt=""></a>SL Courier</li>
+                <li><a href="../index.html#about">Discover</a></li>
+                <li><a href="../Shipping/ship.html">Shipping</a></li>
+                <li><a href="track.html">Tracking</a></li>
+                <li><a href="../index.html#CustSupport">Support</a></li>
+            </ul>
+            <div class="login-signup-button">
+                <button class = 'login'>Login</button>
+                <button class = 'signup'>SignUp</button>
+
+            </div>
+        </nav>
+    </header>
+
+    <div class="imgContainer"></div>
+
+    <div class="track">
+        <div class="ship">
+            <h1>Track your Shipment:</h1>
+            <div class="search-box">
+                <input type="text" id="search" placeholder="Track Package....">
+                <button onclick="search()">Track</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="out" class="outer">
+        <div class="container">
+            <div class="detail">
+                <div class="package">
+                    <h1>Package: <span></span> </h1>
+                </div>
+                <div class="date">
+                    <p>Expected Arrival: <span></span></p>
+                </div>
+            </div>
+    
+            <div class="tracks">
+                <ul id="progress" class="text-center">
+                    <li id="confirm" class="inactive"></li>
+                    <li id="pickup" class="inactive"></li>
+                    <li id="out for" class="inactive"></li>
+                    <li id="deliver" class="inactive"></li>
+                </ul>
+            </div>
+    
+            <div class="lists">
+                <div class="list">
+                    <img src="../images/orderplaced.png" alt="">
+                    <p>Order <br>Confirmed</p>
+                </div>
+                <div class="list">
+                    <img src="../images/pickedup.png" alt="">
+                    <p>Order <br>Picked Up</p>
+                </div>
+                <div class="list">
+                    <img src="../images/outfor.png" alt="">
+                    <p>Out for <br>Delivery</p>
+                </div>
+                <div class="list">
+                    <img src="../images/delivered.png" alt="">
+                    <p>Order <br>Delivered</p>
+                </div>
+            </div>
+            <span style="display: none;" id="invPk"><i class="fas fa-exclamation-circle"></i>***No such package exists***</span>
+    </div> 
+    </div>
+   
+
+    <footer id="SLfooter">
+        <span><b>2024 © StreamLine Courier Services Pvt. Limited. All rights reserved</b></span>
+        <a href="#">Privacy Policy</a>
+        <a href="../FAQs/faqs.html">FAQs</a>
+    </footer>
+    <script src="track.js"></script>
+</body>
+</html>
