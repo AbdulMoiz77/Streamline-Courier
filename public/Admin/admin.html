@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SL Courier-admin</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <header>
+        <nav class='nav-bar'>
+            <ul>
+                <li class='logo'><img src="../images/logo.png" alt="">SL Courier</li>
+                <li><a href="#">Package Routing</a></li>
+                <li><a href="#">Manage Drivers</a></li>
+                <li><a href="#">Manage Packages</a></li>
+                <li><a href="#">Manage Payments</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <header>
+                <h1>Package Routing</h1>
+            </header>
+            <section id="pickupList">
+                <div class="description">   
+                    <form action="">
+                    <div id="routing_package">
+                    <label for="r_package"><span>Package ID</span></label>
+                    <select class="field_effect" id="r_package">
+                        <option value="1">select a package</option>
+                        <option value="2">PK-001</option>
+                        <option value="3">PK-002</option>
+                        <option value="4">PK-003</option>
+                    </select>
+                    </div>
+
+                    <div id="routing_size">
+                    <label for="r_size"><span>Package Size</span></label>
+                    <input type="text" class="display_field" id="r_size" readonly>  
+                    </div><br><br>         
+
+                    <div id="routing_driver">
+                    <label for="r_driver"><span>Driver ID</span></label>
+                    <input type="text" class="field_effect" placeholder="DR-001" id="r_driver" required>
+                    </div>
+
+                    <div id="routing_vehicle">
+                        <label for="r_vehicle"><span>Vehicle type</span></label>
+                        <select class="field_effect" id="r_vehicle">
+                            <option value="bike">bike</option>
+                            <option value="truck">truck</option>
+                        </select>
+                    </div><br><br>
+
+                    <div id="routing_date">
+                        <label for="r_date"><span>Pickup Date</span></label>
+                        <input type="date" class="field_effect" id="r_date" required>
+                    </div>
+
+                    <div id="routing_time">
+                        <label for="r_time"><span>Pickup Time</span></label>
+                        <input type="time" class="field_effect" id="r_time" required>
+                    </div><br><br>
+
+                    <div id="routing_reset">
+                        <input class="button" type="reset">
+                    </div>
+
+                    <div id="routing_submit">
+                        <input class="button" type="submit">
+                    </div>
+
+                    </form>
+                </div>
+            </section><br>
+
+
+            <header>
+                <h1>Manage Drivers</h1>
+            </header>
+            <section id="pickupList">
+                <div class="description">
+                    
+                        <div id="manage_driver_add">
+                            <label for="mD_driver_add"><span>Driver ID</span></label>
+                            <input type="text" class="field_effect" placeholder="d_001" id="mD_driver_add">
+                            </div>
+    
+                        <div id="manage_name_add">
+                            <label for="mD_name_add"><span>Driver Name</span></label>
+                            <input type="text" class="field_effect" placeholder="first_name   last_name" id="mD_name_add">
+                        </div><br><br>         
+    
+                        <div id="manage_phone">
+                        <label for="mD_phone"><span>Phone #</span></label>
+                        <input type="tel" class="field_effect" id="mD_phone" placeholder="0xxx-xxxxxxxx" pattern="[0]{1}[0-9]{3}-[0-9]{7}">
+                        </div><br>
+
+                        <div id="manage_add">
+                            <button class="button">Add</button>
+                        </div><br><br><br>
+
+                        <div id="manage_driver_del">
+                            <label for="mD_driver_del"><span>Driver ID</span></label>
+                            <input type="text" class="field_effect" placeholder="d_001" id="mD_driver_del">
+                        </div>
+
+                        <div id="manage_name_get">
+                            <label for="mD_name_get"><span>Driver Name</span></label>
+                            <input type="text" class="field_effect" id="mD_name_get">
+                        </div><br>
+
+                        <div id="manage_del">
+                            <button class="button">Delete</button>
+                        </div><br><br>
+
+                </div>
+            </section><br>
+
+            <header>
+                <h1>Manage Packages</h1>
+            </header>
+            <section id="pickupList">
+                <div class="description">
+                    <form action="">
+                        <div id="manage_package_Pid">
+                        <label for="mP_package"><span>Package ID</span></label>
+                        <select class="field_effect" id="r_package">
+                        <option value="1">select a package</option>
+                        <option value="2">PK_001</option>
+                        <option value="3">PK_002</option>
+                        <option value="4">PK_003</option>
+                        </select>
+                        </div>
+    
+                        <div id="manage_package_status">
+                        <span>Status</span>
+                        <input type="checkbox" id="mP_status">  
+                        </div><br><br>         
+    
+                        <div id="manage_package_Daddress">
+                        <label for="mP_Daddress"><span>Delivery Address</span></label>
+                        <input type="text" class="field_effect" id="mP_Daddress" required>
+                        </div>
+    
+                        <div id="manage_package_Paddress">
+                            <label for="mP_Paddress"><span>Pickup Address</span></label>
+                            <input type="text" class="field_effect" id="mP_Paddress" required>
+                            </div><br><br>
+    
+                        <div id="manage_package_Ddate">
+                            <label for="mP_Ddate"><span>Delivery Date</span></label>
+                            <input type="date" class="field_effect" id="mP_Ddate" required>
+                        </div>
+    
+                        <div id="manage_package_Dtime">
+                            <label for="mP_Dtime"><span>Delivery Time</span></label>
+                            <input type="time" class="field_effect" id="mP_Dtime" required>
+                        </div><br><br>
+    
+                        <div id="routing_reset">
+                            <input class="button" type="reset">
+                        </div>
+    
+                        <div id="routing_submit">
+                            <input class="button" type="submit">
+                        </div>
+    
+                    </form>
+                </div>
+            </section><br>
+
+            <header>
+                <h1>Manage Paymnets</h1>
+            </header>
+            <section id="pickupList">
+                <div class="description">
+                    
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+
+    <footer>
+        <span>2024 © StreamLine Courier Services Pvt. Limited. All rights reserved</span>
+        <a href="#">Privacy Policy</a>
+    </footer>
+</body>
+</html>
