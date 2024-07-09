@@ -5,7 +5,7 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow: hidden;
+    overflow-x: hidden;
     background: #7ebfb3;
 }
 
@@ -96,8 +96,9 @@ footer {
     color: #7ebfb3;
     font-size: 16px;
     bottom: 0%;
-    position: fixed;
+    position: relative;
     width: 100vw;
+    z-index: 0;
 }
 
 footer span {
@@ -115,10 +116,19 @@ footer a:hover {
     text-decoration: underline;
 }
 
+.banner{
+    background: linear-gradient(180deg,#7ebfb3, #194759);
+    height: 120px;
+    width: 100%;
+    display: flex;
+    color: #ebf2f1;
+    justify-content: center;
+    align-items: center;
+}
 
 #accordian{
-    margin: 100px auto;
-    width: 600px;
+    margin: 60px 20px;
+    width: 1200px;
 }
 
 #accordian li{
@@ -152,8 +162,8 @@ footer a:hover {
 #accordian .content{
     padding: 0 10px;
     line-height: 26px;
-    text-align: justify;
-    text-justify: inter-word;
+    /* text-align: justify;
+    text-justify: inter-word; */
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.5s;
