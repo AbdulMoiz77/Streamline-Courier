@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #7ebfb3;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    font-weight: bold;
+    padding-left: 15px;
+}
+
+nav ul li {
+    padding: 0px 15px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    color: #194759;
+    font-weight: bolder;
+    margin: 0;
+    padding-right: 700px;
+    padding-left: 25px;
+}
+
+.logo img {
+    width: 40px;
+    padding-right: 12px;
+}
+
+.nav-bar {
+    list-style: none;
+    display: flex;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+}
+
+
+main {
+    flex: 1;
+    margin-bottom: 60px; 
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.container header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container header h1 {
+    margin: 0;
+    color: #333;
+}
+
+.container header p {
+    margin: 5px 0 0;
+    color: #666;
+}
+
+#pickupList, #deliveryList, #driverRatings, #deliveryHistory {
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #7ebfb3;
+    color: #fff;
+}
+
+td label {
+    display: flex;
+    align-items: center;
+}
+
+.driver-rating {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.driver-rating h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.driver-rating p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.comments h3 {
+    margin: 10px 0 5px;
+    color: #333;
+}
+
+footer {
+    background-color: #194759;
+    padding: 16px 0px;
+    text-align: center;
+    color: #7ebfb3;
+    font-size: 16px;
+    bottom: 0;
+    position: relative;
+    width: 100%;
+}
+
+footer span {
+    padding-right: 570px;
+}
+
+footer a {
+    color: #7ebfb3;
+    margin: 0 10px;
+    text-decoration: none;
+    padding-left: 18px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
