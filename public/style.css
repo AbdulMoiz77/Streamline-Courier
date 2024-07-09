@@ -276,10 +276,12 @@ nav ul li{
 }
 
 .service-card img {
-    width: 100px;
-    height: 100px;
+    width: 220px;
+    height: 140px;
+    align-items: center;
+    transform: scale(1.02);
     object-fit: cover;
-    border-radius: 50%;
+    border-radius: 10%;
     margin-bottom: 15px;
 }
 
@@ -382,7 +384,7 @@ h1 {
 
 p {
     margin-top: -10px;
-    font-size: 15px;
+    font-size: 14px;
     color: #666;
     margin-bottom: 60px;
     margin-left: 20px;
