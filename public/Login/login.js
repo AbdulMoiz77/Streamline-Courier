@@ -16,7 +16,8 @@ form.addEventListener('submit', (event)=>{
     .then(response => response.json())
     .then(data => {
         if(data.data){     // data = {message: 'Success', data: true}
-            window.location.href = '../Customer/cust.html?id=' + id
+            localStorage.setItem('custID', id)
+            window.location.href = '../Customer/customer.html'
         }else{
             user_icon = document.querySelector('.user-icon')
             pass_icon = document.querySelector('.password-icon')
