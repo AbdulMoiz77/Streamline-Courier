@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #ebf2f1;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    scroll-behavior: smooth !important;
+}
+
+/* Header Styles */
+header{
+    background-color: #7ebfb3;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    font-weight: bold;
+    padding-left: 15px;
+}
+
+nav ul li{
+    padding: 0px 15px;
+}
+
+
+.logo{
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;   
+    color: #194759;
+    font-weight:600;
+    padding-right: 570px;
+    margin: 0;
+    padding-left: 25px;
+
+}
+.logo img {
+    width: 40px;
+    padding-right: 12px;
+}
+
+.nav-bar {
+    list-style: none;
+    display: flex;
+}
+
+
+.nav-bar a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+}
+
+.login-signup-button {
+    display: flex;
+    align-items: center;
+}
+
+.login-signup-button button {
+    margin-left: 0.5rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.login , .signup{
+    background-color: transparent;
+    color: #194759;
+    border: 3px solid #194759;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    text-decoration: double;
+    font-weight: bold;
+}
+
+.login:hover {
+    background-color: #194759;
+    color: #7ebfb3;
+}
+
+/* color : #a7f2e4 , #ebf2f1, #4f7369 */
+.signup:hover {
+    background-color: #194759;
+    color: #7ebfb3;
+}
+
+.imgContainer {
+    background: linear-gradient(to top,#ebf2f1 5%, rgba(0,0,0,0) 30%),
+    url(../images/trackbanner.jpg);
+    background-size: contain;
+    background-position: center; 
+    width: 100%;
+    height: 500px;
+}
+
+.track{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.track .ship{
+    font-family: 'Montserrat', sans-serif;
+    color: #194759;
+    margin: 50px;
+}
+
+.ship h1{
+    font-size: 24px;
+    margin: 0 0 5px 0;
+}
+
+.search-box{
+    margin: 0;
+}
+.ship input{
+    width: 400px;
+    height: 50px; 
+    font-size: 16px;
+    color: #194759;
+    padding-left: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+.ship input::placeholder{
+    color: #194759;
+}
+.ship button{
+    font-size: 16px;
+    width: 90px;
+    height: 50px;
+    outline: none;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    color: #ebf2f1;
+    background-color: #194759;
+    transform: all ease 0.5s;
+}
+
+.ship button:hover{
+    width: 100px;
+}
+
+.outer{
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    background: #ebf2f1;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.4;
+}
+.container{
+    width: 1100px;
+    max-width: 100%;
+    padding: 40px;
+    margin: 0 30px;
+    background: #7ebfb3;
+    position: relative;
+}
+
+.detail{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.package{
+    color: #194759;
+    text-transform: uppercase;
+}
+
+.package span{
+    color: #ebf2f1;
+}
+
+.date p{
+    font-weight: bold;
+    color: #194759;
+    font-size: 20px;
+}
+
+.date span{
+    color: #ebf2f1;
+}
+.tracks{
+    margin: 4em 0 8em;
+}
+
+#progress{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+    position: relative;
+    text-align: center;
+    padding: 0;
+}
+
+#progress li{
+    width: 20%;
+    position: relative;
+}
+
+#progress li::before{
+    content: '\2713';
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 50px;
+    align-items: center;
+    font-size: 2rem;
+    height: 50px;
+    background: #ebf2f1;
+    color: #7ebfb3;
+    border-radius: 50%;
+    z-index: 11111;
+    margin: 0 76px;
+}
+
+#progress .active::before{
+    font-weight: bold;
+    background: #194759;
+}
+
+
+#progress .inactive::before{
+    content: '\2713';
+    font-weight: bold;
+    background: #ebf2f1;
+}
+
+#progress::before{
+    content: '';
+    position: absolute;
+    top: 20px;
+    width: var(--progress-width, 0%);
+    margin-left: 100px;
+    height: 10px;
+    background: #194759;
+    z-index: 1111;
+    transition: width 0.3s ease;
+}
+
+#progress::after{
+    content: '';
+    position: absolute;
+    top: 20px;
+    width: 80%;
+    height: 10px;
+    margin-left: 100px;
+    background: #ebf2f1;
+}
+
+.lists{
+    display: flex;
+    gap: 2em;
+    align-items: center;
+    padding-left: 90px;
+}
+
+.list{
+    display: flex;
+    gap: 1em;
+    flex: 1 1 50px;
+    padding-left: 20px;
+}
+
+.list p{
+    color: #194759;
+    font-size: 1.1rem;
+}
+
+.list img{
+    width: 50px;
+}
+
+#invPk{
+    padding: 70px;
+    font-weight: 600;
+    color: red;
+}
+/* Footer Styles */
+footer {
+    background-color: #194759;
+    padding: 16px 0px;
+    text-align: center;
+    color: #7ebfb3;
+    font-size: 16px;
+    bottom: 0;
+    position: relative;
+    width: 100%;
+}
+
+footer span {
+    padding-right: 570px;
+}
+
+footer a {
+    color: #7ebfb3;
+    margin: 0 10px;
+    text-decoration: none;
+    padding-left: 18px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
