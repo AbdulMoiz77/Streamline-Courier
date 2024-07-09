@@ -16,6 +16,7 @@ form.addEventListener('submit', (event)=>{
     .then(response => response.json())
     .then(data => {
         if(data.data){
+            localStorage.setItem('driverID', id)
             window.location.href = '../Driver/driver.html?id=' + id
         }else{
             user_icon = document.querySelector('.user-icon')
