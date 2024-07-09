@@ -15,6 +15,7 @@ form.addEventListener('submit', (event)=>{
     })
     .then(response => response.json())
     .then(data => {
+        console.log(data)
         if(data.data){
             window.location.href = '../Admin/admin.html'
         }else{
