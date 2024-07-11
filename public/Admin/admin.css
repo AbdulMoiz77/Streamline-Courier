@@ -186,7 +186,7 @@ td label {
 #routing_vehicle{
     display: inline-block;
     position: relative;
-    left: 260px;
+    left: 320px;
 }
 
 #routing_package{
@@ -332,7 +332,7 @@ span{
 #manage_package_Pid{
     display: inline-block;
     position: relative;
-    left: 130px;
+    left: 340px;
     padding-bottom: 5px;
 }
 
@@ -403,4 +403,32 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
+}
+
+#Pid_payment {
+    display: inline-block;
+    position: relative;
+    left: 130px;
+    padding-bottom: 5px;
+}
+
+#paymentMethod {
+    display: inline-block;
+    position: relative;
+    left: 280px;
+    padding-bottom: 5px;
+}
+
+#extraCharges {
+    position: relative;
+    left: 330px;
+    display: inline-block;
+    padding-bottom: 7px;
+}
+
+#payment_submit {
+    display: inline-block;
+    width: 100px;
+    position: relative;
+    left: 450px;
 }
