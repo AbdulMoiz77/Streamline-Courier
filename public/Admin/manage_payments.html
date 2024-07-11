@@ -1,0 +1,146 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SL Courier - Manage Payments</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <header>
+        <nav class='nav-bar'>
+            <ul>
+                <li class='logo'><img src="../images/logo.png" alt="">SL Courier</li>
+                <li><a href="index.html">Package Routing</a></li>
+                <li><a href="manage_driver.html">Manage Drivers</a></li>
+                <li><a href="manage_package.html">Manage Packages</a></li>
+                <li><a href="manage_payments.html">Manage Payments</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <header>
+                <h1>Manage Payments</h1>
+            </header>
+            <section id="updatePayments">
+                <h2 style="text-align: center;">Update Payment Status</h2>
+                <div class="description">
+                    <form action="your_update_payment_status_action_url">
+                        <label for="payment_id"><span>Payment ID</span></label>
+                        <input type="text" class="field_effect" id="payment_id" required>
+
+                        <label for="payment_status"><span>Status</span></label>
+                        <select class="field_effect" id="payment_status">
+                            <option value="pending">Pending</option>
+                            <option value="completed">Completed</option>
+                            <option value="refunded">Refunded</option>
+                        </select>
+
+                        <div id="update_payment_button">
+                            <button class="button" type="submit">Update Status</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <section id="changePaymentDetails">
+                <h2 style="text-align: center;">Change Payment Details</h2>
+                <div class="description">
+                    <form action="your_change_payment_details_action_url">
+                        <label for="payment_id"><span>Payment ID</span></label>
+                        <input type="text" class="field_effect" id="payment_id" required>
+
+                        <label for="payment_date"><span>Date</span></label>
+                        <input type="date" class="field_effect" id="payment_date" required>
+
+                        <label for="payment_amount"><span>Amount</span></label>
+                        <input type="number" class="field_effect" id="payment_amount" required>
+
+                        <label for="package_id"><span>Package ID</span></label>
+                        <input type="text" class="field_effect" id="package_id" required>
+
+                        <div id="change_payment_button">
+                            <button class="button" type="submit">Change Details</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <span>2024 © StreamLine Courier Services Pvt. Limited. All rights reserved</span>
+        <a href="#">Privacy Policy</a>
+    </footer>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SL Courier - Manage Payments</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <header>
+        <nav class='nav-bar'>
+            <ul>
+                <li class='logo'><img src="../images/logo.png" alt="">SL Courier</li>
+                <li><a href="index.html">Package Routing</a></li>
+                <li><a href="manage_driver.html">Manage Drivers</a></li>
+                <li><a href="manage_package.html">Manage Packages</a></li>
+                <li><a href="manage_payments.html">Manage Payments</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <header>
+                <h1>Manage Payments</h1>
+            </header>
+
+            <section id="updatePaymentMethod">
+                <div class="description">
+                    <form action="">
+                        <div id="Pid_payment">
+                            <label for="r_package"><span>Package ID</span></label>
+                            <select class="field_effect" id="r_package" name="packageID">
+                                <option value="">Select a package</option>
+                            </select>
+                        </div>
+
+                        <div id="paymentMethod">
+                        <label for="payment_method"><span>Payment Method</span></label>
+                        <select class="field_effect" id="payment_method" name="payment_method">
+                            <option>select payment method</option>
+                            <option value="credit_card">Credit Card</option>
+                            <option value="cash_on_delivery">Cash on Delivery</option>
+                        </select>
+                        </div><br><br>
+
+                        <div id="extraCharges">
+                            <label for="extra_charges"><span>Extra charges</span></label>
+                            <input type="number" class="field_effect" placeholder="money in $" id="extra_charges" name="extra_charges">
+                        </div><br><br>
+
+                        <div id="payment_submit">
+                            <input class="button" type="submit">
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <span>2024 © StreamLine Courier Services Pvt. Limited. All rights reserved</span>
+        <a href="#">Privacy Policy</a>
+    </footer>
+</body>
+</html>
