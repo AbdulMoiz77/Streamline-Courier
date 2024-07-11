@@ -1,0 +1,150 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SL Courier-admin</title>
+    <link rel="stylesheet" href="admin.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav class='nav-bar'>
+            <ul>
+                <li class='logo'><img src="../images/logo.png" alt="">SL Courier</li>
+                <li><a href="index.html">Package Routing</a></li>
+                <li><a href="manage_driver.html">Manage Drivers</a></li>
+                <li><a href="manage_package.html">Manage Packages</a></li>
+                <li><a href="manage_payments.html">Manage Payments</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <header>
+                <h1>Package Routing</h1>
+            </header>
+            <section id="pickupList">
+                <div class="description">   
+                    <form action="/submit-routing" method="POST">
+                        <div id="routing_package">
+                            <label for="r_package"><span>Package ID</span></label>
+                            <select class="field_effect" id="r_package" name="packageID">
+                            </select>
+                        </div>
+
+                        <div id="routing_size">
+                            <label for="r_size"><span>Package Size</span></label>
+                            <input type="text" class="display_field" id="r_size" readonly>  
+                        </div><br><br>         
+
+                        <div id="routing_driver">
+                            <label for="r_driver"><span>Driver ID</span></label>
+                            <select class="field_effect" id="r_driver" name="driverID">
+                            </select>
+                        </div>
+
+                        <div id="routing_vehicle">
+                            <label for="r_vehicle"><span>Vehicle type</span></label>
+                            <select class="field_effect" id="r_vehicle" name="vehicleType">
+                                <option>select a vehicle</option>
+                                <option value="bike">bike</option>
+                                <option value="truck">truck</option>
+                            </select>
+                        </div><br><br>
+
+                        <div id="routing_date">
+                            <label for="r_date"><span>Pickup Date</span></label>
+                            <input type="date" class="field_effect" id="r_date" name="pickupDate" required>
+                        </div>
+
+                        <div id="routing_time">
+                            <label for="r_time"><span>Pickup Time</span></label>
+                            <input type="time" class="field_effect" id="r_time" name="pickupTime" required min="09:00" max="20:00">
+                        </div><br><br>
+
+                        <div id="routing_reset">
+                            <input class="button" type="reset">
+                        </div>
+
+                        <div id="routing_submit">
+                            <input class="button" type="submit">
+                        </div>
+                    </form>
+                </div>
+            </section><br>
+        </div>
+    </main>
+
+    <footer>
+        <span>2024 © StreamLine Courier Services Pvt. Limited. All rights reserved</span>
+        <a href="#">Privacy Policy</a>
+    </footer>
+
+    <script>
+        $(document).ready(function() {
+            // Load package IDs
+            $.get('/packages', function(data) {
+                let packageSelect = $('#r_package');
+                packageSelect.append('<option value="">select a package</option>');
+                data.forEach(function(package) {
+                    packageSelect.append(`<option value="${package.packageID}">${package.packageID}</option>`);
+                });
+            });
+
+            // Load package size based on selected package ID
+            $('#r_package').change(function() {
+                let packageID = $(this).val();
+                if (packageID) {
+                    $.get(`/package-size/${packageID}`, function(data) {
+                        $('#r_size').val(data.size);
+                    });
+                } else {
+                    $('#r_size').val('');
+                }
+            });
+
+            // Load driver IDs based on selected vehicle type
+            $('#r_vehicle').change(function() {
+                let vehicleType = $(this).val();
+                if (vehicleType) {
+                    $.get(`/drivers/${vehicleType}`, function(data) {
+                        let driverSelect = $('#r_driver');
+                        driverSelect.empty();
+                        driverSelect.append('<option value="">select a driver</option>');
+                        data.forEach(function(driver) {
+                            driverSelect.append(`<option value="${driver.driverID}">${driver.driverID}</option>`);
+                        });
+                    });
+                } else {
+                    $('#r_driver').empty();
+                    $('#r_driver').append('<option value="">select a driver</option>');
+                }
+            });
+
+            // Set min attribute for date input to today's date
+            const today = new Date().toISOString().split('T')[0];
+            $('#r_date').attr('min', today);
+
+            // Restrict pickup date to Monday through Saturday and prevent past dates
+            function restrictPickupDays(event) {
+                const date = new Date(event.target.value);
+                const day = date.getDay(); // 0: Sunday, 1: Monday, ..., 6: Saturday
+                const today = new Date().setHours(0, 0, 0, 0); // today's date at midnight
+                const selectedDate = date.setHours(0, 0, 0, 0); // selected date at midnight
+
+                if (selectedDate < today) { // If selected date is in the past
+                    alert('Pickup date cannot be in the past. Please select today or an upcoming date.');
+                    event.target.value = ''; // Clear the invalid date
+                } else if (day === 0) { // If Sunday
+                    alert('Pickup date cannot be Sunday. Please select a date from Monday to Saturday.');
+                    event.target.value = ''; // Clear the invalid date
+                }
+            }
+
+            $('#r_date').change(restrictPickupDays);
+        });
+    </script>
+</body>
+</html>
