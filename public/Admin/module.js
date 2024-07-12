@@ -120,6 +120,87 @@ app.post('/submit-package', (req, res) => {
 
 
 
+// Endpoint to fetch the payment method for a given package
+app.get('/payment-method/:packageID', (req, res) => {
+    const { packageID } = req.params;
+    const query = 'SELECT payMethod FROM payment WHERE transactionID = (SELECT transactionID FROM package WHERE packageID = ?)';
+    con.query(query, [packageID], (err, results) => {
+        if (err) throw err;
+        if (results.length > 0) {
+            res.json(results[0]);
+        } else {
+            res.status(404).send('Payment method not found.');
+        }
+    });
+});
+
+// Endpoint to update payment details
+app.post('/update-payment', (req, res) => {
+    const { packageID, paymentMethod, extraCharges } = req.body;
+
+    //Get the transactionID from the package table
+    const getTransactionIdQuery = 'SELECT transactionID FROM package WHERE packageID = ?';
+    con.query(getTransactionIdQuery, [packageID], (err, results) => {
+        if (err) {
+            console.error('Error fetching transaction ID:', err);
+            res.status(500).send('Error fetching transaction ID from the database.');
+            return;
+        }
+
+        if (results.length === 0) {
+            res.status(404).send('Package ID not found.');
+            return;
+        }
+
+        const transactionID = results[0].transactionID;
+
+        //Update the payment method in the payment table
+        const updatePaymentQuery = 'UPDATE payment SET payMethod = ? WHERE transactionID = ?';
+        con.query(updatePaymentQuery, [paymentMethod, transactionID], (err) => {
+            if (err) {
+                console.error('Error updating payment method:', err);
+                res.status(500).send('Error updating payment method in the database.');
+                return;
+            }
+
+            //Fetch the current amount from the payment table
+            const getAmountQuery = 'SELECT amount FROM payment WHERE transactionID = ?';
+            con.query(getAmountQuery, [transactionID], (err, results) => {
+                if (err) {
+                    console.error('Error fetching amount:', err);
+                    res.status(500).send('Error fetching amount from the database.');
+                    return;
+                }
+
+                if (results.length === 0) {
+                    res.status(404).send('Transaction ID not found.');
+                    return;
+                }
+
+                const currentAmount = parseFloat(results[0].amount);
+                console.log('Current amount:', currentAmount);
+                const updatedAmount = parseFloat(currentAmount + extraCharges);
+                console.log('Updated amount:', updatedAmount);
+
+                // Step 4: Update the amount in the payment table
+                const updateAmountQuery = 'UPDATE payment SET amount = ? WHERE transactionID = ?';
+                con.query(updateAmountQuery, [updatedAmount, transactionID], (err) => {
+                    if (err) {
+                        console.error('Error updating amount:', err);
+                        res.status(500).send('Error updating amount in the database.');
+                        return;
+                    }
+
+                    console.log('Payment details updated successfully.');
+                    res.send({ message: 'Payment details updated successfully.' });
+                });
+            });
+
+        });
+    });
+});
+
+
 // // Start server
 const port = 3000;
 app.listen(port,console.log(`Server running at port:${port}`));
