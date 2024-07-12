@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -73,6 +73,7 @@
                         </div>
                     </form>
                 </div>
+                <div id="confirmationMessage" style="display:none;"></div>
             </section><br>
         </div>
     </main>
@@ -144,6 +145,35 @@
             }
 
             $('#r_date').change(restrictPickupDays);
+
+            // Handle form submission via AJAX
+            $('form').submit(function(event) {
+                event.preventDefault();
+
+                if (confirm('Do you want to permanently make changes?')) {
+                    $.post('/submit-routing', $(this).serialize(), function(response) {
+                        $('#confirmationMessage').text(response.message).show();
+
+                        setTimeout(function() {
+                            $('#confirmationMessage').fadeOut(function() {
+                                $(this).text('');
+                            });
+
+                            // Reset form fields after 2 seconds
+                            $('form')[0].reset();
+                            $('#r_size').val('');
+                        }, 2000);
+                    }).fail(function() {
+                        $('#confirmationMessage').text('Error saving data to the database.').show();
+
+                        setTimeout(function() {
+                            $('#confirmationMessage').fadeOut(function() {
+                                $(this).text('');
+                            });
+                        }, 2000);
+                    });
+                }
+            });
         });
     </script>
 </body>
