@@ -59,7 +59,6 @@ nav ul li {
     font-size: 1rem;
 }
 
-
 main {
     flex: 1;
     margin-bottom: 60px; 
@@ -100,6 +99,11 @@ table, th, td {
     border: 1px solid #ddd;
 }
 
+thead {
+    background-color: #7ebfb3;
+    color: #fff;
+}
+
 th, td {
     padding: 12px;
     text-align: left;
@@ -126,41 +130,60 @@ td label {
 
 .driver-rating h2 {
     margin-top: 0;
-    color: #333;
 }
 
 .driver-rating p {
-    margin: 5px 0;
-    color: #555;
+    margin: 10px 0;
 }
 
 .comments h3 {
-    margin: 10px 0 5px;
+    margin-bottom: 5px;
     color: #333;
 }
 
+.comments p {
+    margin: 0 0 10px;
+    color: #666;
+}
+
 footer {
-    background-color: #194759;
-    padding: 16px 0px;
-    text-align: center;
-    color: #7ebfb3;
-    font-size: 16px;
-    bottom: 0;
-    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
+    padding: 10px;
+    background-color: #f8f8f8;
+    position: absolute; 
+    bottom: 0;
+    left: 0;
 }
 
 footer span {
-    padding-right: 570px;
+    margin-left: 40px;
+    color: #666;
 }
 
 footer a {
-    color: #7ebfb3;
-    margin: 0 10px;
+    margin-right: 40px;
     text-decoration: none;
-    padding-left: 18px;
+    color: #7ebfb3;
 }
 
-footer a:hover {
-    text-decoration: underline;
+#deliveryHistory {
+    margin-top: 50px;
+}
+
+#deliveryHistory table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#deliveryHistory table, #deliveryHistory th, #deliveryHistory td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+#deliveryHistory th {
+    background-color: #f2f2f2;
 }

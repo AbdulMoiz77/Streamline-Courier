@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SL Courier</title>
+    <link rel="stylesheet" href="driver.css">
+</head>
+<body>
+    <header>
+        <nav class='nav-bar'>
+            <ul>
+                <li class='logo'><a href="driver.html"></a><img src="logo.png" alt="">SL Courier</li>
+                <li><a href="#pickupList">Pickup</a></li>
+                <li><a href="#deliveryList">Delivery</a></li>
+                <li><a href="#driverRatings">Profile</a></li>
+                <li><a href="#deliveryHistory">History</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <header>
+                <h1>Today's Pickups</h1>
+                <p>Date: <span id="currentDate">07/12/2024</span></p>
+            </header>
+            <section id="pickupList">
+                <table>
+                    <tr>
+                        <th>Package ID</th>
+                        <th>Pickup Address</th>
+                        <th>Pickup Time</th>
+                        <th>Status</th>
+                        <th>Fragile</th>
+                    </tr>
+                    <tr>
+                        <td>PKG019</td>
+                        <td>1900 Vine St, Philadelphia</td>
+                        <td>07/12/2024, 09:30:00 AM</td>
+                        <td>Pending</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td>PKG020</td>
+                        <td>2000 Walnut St, Philadelphia</td>
+                        <td>07/12/2024, 11:00:00 AM</td>
+                        <td>Pending</td>
+                        <td>Yes</td>
+                    </tr>
+                    </tr>
+                </table>
+            </section>
+
+            <section id="deliveryList">
+                <header>
+                    <h1>Packages Ready for Delivery</h1>
+                    <p>Date: <span id="currentDate">07/12/2024</span></p>
+                </header>
+                <table>
+                    <tr>
+                        <th>Package ID</th>
+                        <th>Delivery Address</th>
+                        <th>Delivery Time</th>
+                        <th>Status</th>
+                    </tr>
+                    <tr>
+                        <td>PKG021</td>
+                        <td>2101 Chestnut St, Philadelphia</td>
+                        <td>07/12/2024, 08:00:00 PM</td>
+                        <td>Ready for Delivery</td>
+                    </tr>
+                    <tr>
+                        <td>PKG022</td>
+                        <td>2201 Spruce St, Philadelphia</td>
+                        <td>07/12/2024, 09:30:00 PM</td>
+                        <td>Ready for Delivery</td>
+                    </tr>
+                </table>
+            </section>
+
+            <section id="driverRatings">
+                <div class="driver-rating">
+                    <h2>Driver Information</h2>
+                    <p>Name: Trsiten Wright</p>
+                    <p>Phone No: +926935925642</p>
+                    <p>Vehicle Type: Bike</p>
+                    <p>Plate no: ABC123</p>
+                    <h2>Driver Rating</h2>
+                    <p>Rating: 4.9/5</p>
+                    <h2>Latest Comments</h2>
+                    <div class="comments">
+                        <h3>Package ID: PKG025</h3>
+                        <p>"Superb service, very friendly!" - Rating: 5/5</p>
+                        <h3>Package ID: PKG023</h3>
+                        <p>"Quick and reliable." - Rating: 4.8/5</p>
+                        <h3>Package ID: PKG024</h3>
+                        <p>"Highly recommended!" - Rating: 4.7/5</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="deliveryHistory">
+                <header>
+                    <h1>Delivery History</h1>
+                </header>
+                <table>
+                    <tr>
+                        <th>Package ID</th>
+                        <th>Delivery Date</th>
+                        <th>Delivery Time</th>
+                        <th>Customer Rating</th>
+                        <th>Customer Comment</th>
+                    </tr>
+                    <tr>
+                        <td>PKG025</td>
+                        <td>07/11/2024</td>
+                        <td>2:00 PM</td>
+                        <td>5/5</td>
+                        <td>"Superb service, very friendly!"</td>
+                    </tr>
+                    <tr>
+                        <td>PKG023</td>
+                        <td>07/10/2024</td>
+                        <td>3:30 PM</td>
+                        <td>4.8/5</td>
+                        <td>"Quick and reliable."</td>
+                    </tr>
+                    <tr>
+                        <td>PKG024</td>
+                        <td>07/09/2024</td>
+                        <td>5:00 PM</td>
+                        <td>4.7/5</td>
+                        <td>"Highly recommended!"</td>
+                    </tr>
+                </table>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <span>2024 © StreamLine Courier Services Pvt. Limited. All rights reserved</span>
+        <a href="#">Privacy Policy</a>
+    </footer>
+    <script src="driver.js"></script>
+</body>
+</html>

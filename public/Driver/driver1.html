@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SL Courier</title>
+    <link rel="stylesheet" href="driver.css">
+</head>
+<body>
+    <header>
+        <nav class='nav-bar'>
+            <ul>
+                <li class='logo'><a href="driver.html"></a><img src="logo.png" alt="">SL Courier</li>
+                <li><a href="#pickupList">Pickup</a></li>
+                <li><a href="#deliveryList">Delivery</a></li>
+                <li><a href="#driverRatings">Profile</a></li>
+                <li><a href="#deliveryHistory">History</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <header>
+                <h1>Today's Pickups</h1>
+                <p>Date: <span id="currentDate">07/12/2024</span></p>
+            </header>
+            <section id="pickupList">
+                <table>
+                    <tr>
+                        <th>Package ID</th>
+                        <th>Pickup Address</th>
+                        <th>Pickup Time</th>
+                        <th>Status</th>
+                        <th>Fragile</th>
+                    </tr>
+                    <tr>
+                        <td>PKG010</td>
+                        <td>101 Maple St, Rivertown</td>
+                        <td>07/12/2024, 08:30:00 AM</td>
+                        <td>Pending</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td>PKG011</td>
+                        <td>202 Oak St, Riverdale</td>
+                        <td>07/12/2024, 10:15:00 AM</td>
+                        <td>Pending</td>
+                        <td>Yes</td>
+                    </tr>
+                    <tr>
+                        <td>PKG012</td>
+                        <td>303 Pine St, Rivercity</td>
+                        <td>07/12/2024, 12:45:00 PM</td>
+                        <td>Pending</td>
+                        <td>No</td>
+                    </tr>
+                </table>
+            </section>
+
+            <section id="deliveryList">
+                <header>
+                    <h1>Packages Ready for Delivery</h1>
+                    <p>Date: <span id="currentDate">07/12/2024</span></p>
+                </header>
+                <table>
+                    <tr>
+                        <th>Package ID</th>
+                        <th>Delivery Address</th>
+                        <th>Delivery Time</th>
+                        <th>Status</th>
+                    </tr>
+                    <tr>
+                        <td>PKG013</td>
+                        <td>404 Cedar St, Rivertown</td>
+                        <td>07/12/2024, 02:30:00 PM</td>
+                        <td>Ready for Delivery</td>
+                    </tr>
+                    <tr>
+                        <td>PKG014</td>
+                        <td>505 Birch St, Riverdale</td>
+                        <td>07/12/2024, 04:15:00 PM</td>
+                        <td>Ready for Delivery</td>
+                    </tr>
+                    <tr>
+                        <td>PKG015</td>
+                        <td>606 Aspen St, Rivercity</td>
+                        <td>07/12/2024, 05:45:00 PM</td>
+                        <td>Ready for Delivery</td>
+                    </tr>
+                </table>
+            </section>
+
+            <section id="driverRatings">
+                <div class="driver-rating">
+                    <h2>Driver Information</h2>
+                    <p>Name: Jane Smith</p>
+                    <p>Phone No: +923966741740</p>
+                    <p>Vehicle Type: Truck</p>
+                    <p>Plate no: XYZ789</p>
+                    <h2>Driver Rating</h2>
+                    <p>Rating: 4.7/5</p>
+                    <h2>Latest Comments</h2>
+                    <div class="comments">
+                        <h3>Package ID: PKG016</h3>
+                        <p>"Very professional and efficient!" - Rating: 4.9/5</p>
+                        <h3>Package ID: PKG017</h3>
+                        <p>"Handled the delivery with care." - Rating: 4.6/5</p>
+                        <h3>Package ID: PKG018</h3>
+                        <p>"Great service, would recommend!" - Rating: 4.8/5</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="deliveryHistory">
+                <header>
+                    <h1>Delivery History</h1>
+                </header>
+                <table>
+                    <tr>
+                        <th>Package ID</th>
+                        <th>Delivery Date</th>
+                        <th>Delivery Time</th>
+                        <th>Customer Rating</th>
+                        <th>Customer Comment</th>
+                    </tr>
+                    <tr>
+                        <td>PKG16</td>
+                        <td>07/11/2024</td>
+                        <td>3:00 PM</td>
+                        <td>4.9/5</td>
+                        <td>"Very professional and efficient!"</td>
+                    </tr>
+                    <tr>
+                        <td>PKG17</td>
+                        <td>07/10/2024</td>
+                        <td>4:15 PM</td>
+                        <td>4.6/5</td>
+                        <td>"Handled the delivery with care."</td>
+                    </tr>
+                    <tr>
+                        <td>PKG18</td>
+                        <td>07/09/2024</td>
+                        <td>5:30 PM</td>
+                        <td>4.8/5</td>
+                        <td>"Great service, would recommend!"</td>
+                    </tr>
+                </table>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <span>2024 © StreamLine Courier Services Pvt. Limited. All rights reserved</span>
+        <a href="#">Privacy Policy</a>
+    </footer>
+    <script src="driver.js"></script>
+</body>
+</html>

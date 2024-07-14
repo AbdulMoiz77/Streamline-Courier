@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SL Courier</title>
+    <link rel="stylesheet" href="driver.css">
+</head>
+<body>
+    <header>
+        <nav class='nav-bar'>
+            <ul>
+                <li class='logo'><a href="driver.html"></a><img src="logo.png" alt="">SL Courier</li>
+                <li><a href="#pickupList">Pickup</a></li>
+                <li><a href="#deliveryList">Delivery</a></li>
+                <li><a href="#driverRatings">Profile</a></li>
+                <li><a href="#deliveryHistory">History</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <header>
+                <h1>Today's Pickups</h1>
+                <p>Date: <span id="currentDate">07/12/2024</span></p>
+            </header>
+            <section id="pickupList">
+                <table>
+                    <tr>
+                        <th>Package ID</th>
+                        <th>Pickup Address</th>
+                        <th>Pickup Time</th>
+                        <th>Status</th>
+                        <th>Fragile</th>
+                    </tr>
+                    <tr>
+                        <td>PKG001</td>
+                        <td>123 Main St, Springfield</td>
+                        <td>07/12/2024, 09:00:00 AM</td>
+                        <td>Pending</td>
+                        <td>Yes</td>
+                    </tr>
+                    <tr>
+                        <td>PKG002</td>
+                        <td>456 Elm St, Shelbyville</td>
+                        <td>07/12/2024, 11:00:00 AM</td>
+                        <td>Pending</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td>PKG003</td>
+                        <td>789 Oak St, Ogdenville</td>
+                        <td>07/12/2024, 01:00:00 PM</td>
+                        <td>Pending</td>
+                        <td>Yes</td>
+                    </tr>
+                </table>
+            </section>
+
+            <section id="deliveryList">
+                <header>
+                    <h1>Packages Ready for Delivery</h1>
+                    <p>Date: <span id="currentDate">07/12/2024</span></p>
+                </header>
+                <table>
+                    <tr>
+                        <th>Package ID</th>
+                        <th>Delivery Address</th>
+                        <th>Delivery Time</th>
+                        <th>Status</th>
+                    </tr>
+                    <tr>
+                        <td>PKG004</td>
+                        <td>789 Thugs St, Springfield</td>
+                        <td>07/12/2024, 02:45:00 PM</td>
+                        <td>Ready for Delivery</td>
+                    </tr>
+                    <tr>
+                        <td>PKG005</td>
+                        <td>321 Pine St, Shelbyville</td>
+                        <td>07/12/2024, 04:30:00 PM</td>
+                        <td>Ready for Delivery</td>
+                    </tr>
+                    <tr>
+                        <td>PKG006</td>
+                        <td>654 Birch St, Ogdenville</td>
+                        <td>07/12/2024, 06:00:00 PM</td>
+                        <td>Ready for Delivery</td>
+                    </tr>
+                </table>
+            </section>
+
+            <section id="driverRatings">
+                <div class="driver-rating">
+                    <h2>Driver Information</h2>
+                    <p>Name: Ali Wong</p>
+                    <p>Phone No: +923894526475</p>
+                    <p>Vehicle Type: Bike</p>
+                    <p>Plate no: 123</p>
+                    <h2>Driver Rating</h2>
+                    <p>Rating: 4.5/5</p>
+                    <h2>Latest Comments</h2>
+                    <div class="comments">
+                        <h3>Package ID: PKG007</h3>
+                        <p>"Excellent service!" - Rating: 5/5</p>
+                        <h3>Package ID: PKG008</h3>
+                        <p>"Very prompt and careful." - Rating: 4.5/5</p>
+                        <h3>Package ID: PKG009</h3>
+                        <p>"Handled fragile items well." - Rating: 4.8/5</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="deliveryHistory">
+                <header>
+                    <h1>Delivery History</h1>
+                </header>
+                <table>
+                    <tr>
+                        <th>Package ID</th>
+                        <th>Delivery Date</th>
+                        <th>Delivery Time</th>
+                        <th>Customer Rating</th>
+                        <th>Customer Comment</th>
+                    </tr>
+                    <tr>
+                        <td>PKG007</td>
+                        <td>07/11/2024</td>
+                        <td>4:00 PM</td>
+                        <td>5/5</td>
+                        <td>"Excellent service!"</td>
+                    </tr>
+                    <tr>
+                        <td>PKG008</td>
+                        <td>07/10/2024</td>
+                        <td>5:30 PM</td>
+                        <td>4.5/5</td>
+                        <td>"Very prompt and careful."</td>
+                    </tr>
+                    <tr>
+                        <td>PKG009</td>
+                        <td>07/09/2024</td>
+                        <td>6:00 PM</td>
+                        <td>4.8/5</td>
+                        <td>"Handled fragile items well."</td>
+                    </tr>
+                </table>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <span>2024 © StreamLine Courier Services Pvt. Limited. All rights reserved</span>
+        <a href="#">Privacy Policy</a>
+    </footer>
+    <script src="driver.js"></script>
+</body>
+</html>
